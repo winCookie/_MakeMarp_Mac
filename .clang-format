@@ -1,0 +1,17 @@
+# 继承 LLVM 风格作为基础
+BasedOnStyle: LLVM
+# 设置缩进宽度为4个空格
+IndentWidth: 4
+# 让大括号 { 紧跟在函数或控制流的同一行
+BreakBeforeBraces: Attach
+# 调整大括号行为以实现你的特殊需求
+BraceWrapping:
+  AfterFunction:   false  # 函数的左大括号与函数声明在同一行
+  AfterControlStatement: false # 控制流语句的左大括号与语句在同一行
+  BeforeCatch:     true
+  BeforeElse:      true
+  IndentBraces:    false
+  AfterClass: false
+  AfterStruct: false
+  AfterEnum: false
+  AfterNamespace: false
