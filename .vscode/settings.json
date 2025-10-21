@@ -4,6 +4,7 @@
     "lldb.dereferencePointers": true,
     "lldb.consoleMode": "commands",
     "files.associations": {
-        "ios": "cpp"
+        "ios": "cpp",
+        "iostream": "cpp"
     }
 }
