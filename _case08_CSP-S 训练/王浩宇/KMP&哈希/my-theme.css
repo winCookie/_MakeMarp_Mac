@@ -1,0 +1,10 @@
+/* @theme my-theme */
+@import 'default';
+
+section {
+  background-image: url('bg01.png');
+  background-size: cover;
+  background-position: center;
+  font-family: 'Arial', sans-serif;
+  color: red;
+}
