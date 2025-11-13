@@ -5,6 +5,7 @@
     "lldb.consoleMode": "commands",
     "files.associations": {
         "ios": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "string": "cpp"
     }
 }
