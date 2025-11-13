@@ -5,58 +5,171 @@ math: katex
 footer: '奇思妙学 GESP 六级'
 theme: default
 style: |
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap');
+  
   section {
-    background-image: url('../imgs/bg_gesp.png');
-    background-size: cover;
-    background-position: center;
+    font-family: 'IBM Plex Sans', 'SF Pro Display', -apple-system, sans-serif;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    color: #e2e8f0;
+    padding: 50px;
   }
-  .little{
-    font-size:23px;
+  
+  h1 {
+    font-size: 2.7em;
+    font-weight: 600;
+    background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    margin-bottom: 2rem;
+    letter-spacing: -0.01em;
   }
-  .red{ color:red;  }
-  /* VSCode Light+ 主题代码配色 */
+  
+  h2 {
+    font-size: 1.8em;
+    font-weight: 500;
+    color: #cbd5e1;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #334155;
+    padding-bottom: 0.5rem;
+  }
+  
+  h3 {
+    font-size: 1.3em;
+    font-weight: 500;
+    color: #94a3b8;
+  }
+  
+  /* 科技感内容块 */
+  .tech-card {
+    background: rgba(30, 41, 59, 0.7);
+    border: 1px solid #334155;
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 1.5rem 0;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  }
+  
+  .little {
+    font-size: 16px;
+    color: #94a3b8;
+    line-height: 1.5;
+  }
+  
+  .glow {
+    color: #60a5fa;
+    text-shadow: 0 0 10px rgba(96, 165, 250, 0.3);
+  }
+  
+  /* 代码块样式 - 深色主题 */
   code {
-    background-color: #f5f5f5;
-    color: #333333;
-    font-family: 'Cascadia Code', 'Consolas', 'Monaco', 'Courier New', monospace;
+    font-family: 'IBM Plex Mono', 'Fira Code', monospace;
+    background: rgba(15, 23, 42, 0.8);
+    color: #e2e8f0;
     padding: 0.2em 0.4em;
-    border-radius: 3px;
-    border: 1px solid #e1e1e1;
+    border-radius: 6px;
+    border: 1px solid #334155;
+    font-size: 0.9em;
+    font-weight: 400;
   }
   
   pre {
-    background-color: #f5f5f5 !important;
-    border: 1px solid #e1e1e1;
-    border-radius: 6px;
-    padding: 1em;
-    overflow: auto;
-    font-family: 'Cascadia Code', 'Consolas', 'Monaco', 'Courier New', monospace;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background: rgba(15, 23, 42, 0.9) !important;
+    border: 1px solid #475569;
+    border-radius: 12px;
+    padding: 1.5em;
+    font-family: 'IBM Plex Mono', 'Fira Code', monospace;
+    margin: 1.5rem 0;
+    font-size: 0.85em;
+    line-height: 1.4;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
   }
   
-  /* 内联代码 */
-  :not(pre) > code {
-    background-color: #f8f8f8;
-    color: #333333;
-    border: 1px solid #e8e8e8;
+  /* 语法高亮 - 深色科技感 */
+  .hljs-keyword { color: #f472b6; font-weight: 500; }
+  .hljs-built_in { color: #93c5fd; }
+  .hljs-type { color: #60a5fa; }
+  .hljs-literal { color: #fbbf24; }
+  .hljs-number { color: #fbbf24; }
+  .hljs-string { color: #86efac; }
+  .hljs-comment { color: #64748b; font-style: italic; }
+  .hljs-title { color: #93c5fd; }
+  .hljs-params { color: #f472b6; }
+  .hljs-meta { color: #cbd5e1; }
+  .hljs-variable { color: #f472b6; }
+  .hljs-function { color: #60a5fa; }
+  .hljs-class { color: #93c5fd; }
+  .hljs-operator { color: #f472b6; }
+  .hljs-tag { color: #86efac; }
+  
+  /* 表格样式 */
+  table {
+    border: 1px solid #334155;
+    border-collapse: collapse;
+    width: 100%;
+    margin: 1.5rem 0;
+    background: rgba(30, 41, 59, 0.7);
+    border-radius: 8px;
+    overflow: hidden;
   }
   
-  /* 语法高亮配色 - VSCode Light+ 主题 */
-  .hljs-keyword { color: #0000ff; }
-  .hljs-built_in { color: #267f99; }
-  .hljs-type { color: #267f99; }
-  .hljs-literal { color: #0000ff; }
-  .hljs-number { color: #098658; }
-  .hljs-string { color: #a31515; }
-  .hljs-comment { color: #008000; }
-  .hljs-title { color: #795e26; }
-  .hljs-params { color: #001080; }
-  .hljs-meta { color: #001080; }
-  .hljs-variable { color: #001080; }
-  .hljs-function { color: #795e26; }
-  .hljs-class { color: #267f99; }
-  .hljs-operator { color: #000000; }
+  th, td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #334155;
+    text-align: left;
+  }
+  
+  th {
+    background: rgba(51, 65, 85, 0.8);
+    font-weight: 500;
+    color: #e2e8f0;
+  }
+  
+  tr:hover {
+    background: rgba(51, 65, 85, 0.4);
+  }
+  
+  /* 列表样式 */
+  ul, ol {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+  }
+  
+  li {
+    margin: 0.5rem 0;
+    line-height: 1.6;
+  }
+  
+  /* 数学公式 */
+  .katex {
+    font-size: 1.05em;
+    color: #e2e8f0;
+  }
+  
+  /* 页脚 */
+  footer {
+    color: #64748b;
+    font-size: 0.75em;
+  }
+  
+  /* 分页指示器 */
+  .marp-pagination {
+    color: #475569;
+  }
+  
+  /* 链接样式 */
+  a {
+    color: #60a5fa;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: #93c5fd;
+    text-decoration: underline;
+  }
 ---
+
 
 # GESP C++ 六级认证（四）
 
@@ -115,9 +228,6 @@ style: |
 时间复杂度：$O(N \log N)$，在 $N \leq 3 \times 10^5$ 时可行。
 
 ---
-###
-
-#### ▍参考代码
 
 ```cpp
 #define int long long
@@ -145,9 +255,6 @@ void msort(int l, int r) {
     for (int i = l; i <= r; i++)
         a[i] = b[i];
 }
-
-
-
 ```
 
 ---
@@ -370,7 +477,6 @@ int main() {
   5. **时间复杂度**：$O(n)$，只需遍历一次移动序列。
 
 ---
-##
 
 ▍参考代码
 
@@ -676,6 +782,8 @@ vector<int> find_path(int x) {
     }
     return s;
 }
+
+
 ```
 
 ---
